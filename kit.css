@@ -1,0 +1,45 @@
+:root {
+  --bg: #FAF6EF; --surface: #FDFBF9; --ink: #10263B; --ink-soft: #3E5166; --line: #E4DED2;
+  --sky: #007E9E; --sky-fill: #009BC1; --orange: #F98109; --code-bg: #10263B; --code-ink: #E8EDF3; --slot: #F98109;
+  --font-display: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', Consolas, 'Courier New', monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0B1C2C; --surface: #10263B; --ink: #F3F4F5; --ink-soft: #B9C4CF; --line: #24405A;
+    --sky: #3CC3E3; --code-bg: #061320; --slot: #FFA34A; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; padding-block: 24px 64px; display: flex; flex-direction: column; gap: 26px; }
+header { display: flex; flex-direction: column; gap: 6px; border-bottom: 3px solid var(--ink); padding-block: 8px 18px; }
+.top { display: flex; align-items: center; gap: 14px; }
+.big { font-family: var(--font-display); font-size: 56px; font-weight: 700; line-height: 1; color: var(--orange); }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--sky); }
+h1 { font-family: var(--font-display); font-size: 32px; line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-size: 20px; margin: 0; line-height: 1.25; }
+.lede { margin: 0; color: var(--ink-soft); }
+.mine { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+.mine p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; }
+input, textarea, select { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+textarea { min-height: 72px; resize: vertical; }
+input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--sky-fill); outline-offset: 2px; }
+.block { display: flex; flex-direction: column; gap: 10px; }
+.prompt { background: var(--code-bg); color: var(--code-ink); border-radius: 12px; padding: 16px; font-family: var(--font-mono); font-size: 14.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+.slot { color: var(--slot); font-weight: 600; }
+button.copy { align-self: flex-start; font: inherit; font-weight: 600; font-size: 15px; border: 0; border-radius: 999px; padding: 10px 20px; background: var(--sky-fill); color: #FFFFFF; cursor: pointer; min-height: 44px; }
+button.copy[data-done] { background: var(--ink); color: var(--bg); }
+.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.check li { display: flex; gap: 10px; align-items: baseline; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.check b { font-family: var(--font-display); color: var(--sky); min-width: 18px; }
+.watch { border-left: 4px solid var(--orange); padding: 4px 0 4px 14px; display: flex; flex-direction: column; gap: 6px; }
+.watch p { margin: 0; }
+nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+nav a { display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-weight: 600; font-size: 14px; }
+nav a[aria-current] { border-color: var(--orange); }
+nav a span { display: block; font-family: var(--font-display); color: var(--orange); font-size: 20px; }
+footer { font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 16px; }
