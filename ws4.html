@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Govern it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap">
+<link rel="stylesheet" href="kit.css">
+</head>
+<body>
+<div class="wrap">
+<header><span class="eyebrow">Workshop 4 · AI in Project Management</span><div class="top"><span class="big">4</span><h1>Govern it</h1></div><p class="lede">Decide your team’s AI rules first. Use the prompt only for a second opinion.</p></header>
+<section class="mine" aria-labelledby="mine-h"><h2 id="mine-h">Your team’s project</h2><label for="project">Project<select id="project"><option value="">Choose one…</option><option>install and commission a new CNC machine in our workshop</option><option>set up a 3D-printing lab for our department</option><option>relocate a production line to a new area of the factory</option><option>build a test rig for fatigue testing</option><option>run a student robotics competition</option><option>add rooftop solar panels to a factory</option><option value="__own">Our own project…</option></select></label><label for="own" id="own-wrap" hidden>Describe your project<input id="own" type="text" placeholder="e.g. upgrade the compressed-air system"></label><p>Saved on this phone only and shared across the four workshop pages. Nothing is sent anywhere.</p></section>
+<section class="block" aria-labelledby="do-h"><h2 id="do-h">Your turn · 8 minutes</h2><ol class="steps"><li>Rotate roles one last time.</li><li>Agree on an answer to each question below and write it on your A3 sheet.</li><li>Optional: compare with the AI’s suggestion.</li><li>Then vote on Mentimeter: who is responsible when AI gets it wrong?</li></ol></section>
+<ul class="check"><li><b>1</b><span>Who signs off the plan before work starts?</span></li><li><b>2</b><span>What data must never go into a public AI tool?</span></li><li><b>3</b><span>Where must a human review before anyone acts?</span></li></ul>
+<section class="block"><pre class="prompt" id="p1" data-tpl="We are planning to {project} using AI tools.
+Suggest 3 short rules: who should sign off the plan, what data should stay out of public AI tools, and where a human must review before work starts."></pre><button class="copy" type="button" data-target="p1">Copy prompt</button></section>
+<div class="watch"><h2>Before you trust the answer</h2><p>AI can invent facts and references that look real. Check them.</p><p>It sounds confident when it is wrong. You are the engineer of record.</p><p>Never paste confidential, client or personal data into a public AI tool.</p></div>
+<nav aria-label="Workshops"><a href="ws1.html"><span>1</span>Plan it with AI</a><a href="ws2.html"><span>2</span>Make it SMART</a><a href="ws3.html"><span>3</span>Attack the plan</a><a href="ws4.html" aria-current="page"><span>4</span>Govern it</a></nav>
+<footer>AI in Project Management · Guest workshop, University of Nottingham Malaysia · Mahesh Kumar</footer>
+</div>
+<script src="kit.js"></script>
+</body>
+</html>
